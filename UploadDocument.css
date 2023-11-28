@@ -1,0 +1,158 @@
+.lsbody {
+  margin-bottom: auto 0px; 
+  padding: 0; 
+  background-image: url('/public/crystalbackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat:repeat;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}  
+
+.lsbody::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the last value to change the opacity */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 10px;
+  }
+  .upload-document-container {
+    display: flex;
+    flex-direction: column;
+    height: 500vh; /* Set height to 100% of the viewport height */
+  }
+  
+  .upload-document-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Adjust the gap between the columns */
+    padding: 20px;
+    margin: 20px;
+    margin-top: 80px;
+  }
+  
+  .left-panel{
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 730px;
+    height: 478px;
+    margin-top: 90px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    border: 3px dashed #A58585;
+    text-align: center;
+  }
+
+  .right-panel{
+    background: #FFD234;
+    border-radius: 15px;
+    padding: 20px;
+    width: 700px;
+    height: 622px;
+    margin-left: 30px;
+    margin-top: 90px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .fileComponents {
+    background: white;
+    width: 640px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 0 auto 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+  }
+
+  .uploadedFilePanel {
+    padding: 20px;
+    width: 95%;
+    height: 540px;
+    overflow-y: auto;
+
+  }
+
+  .file-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  /* Style for IconButton */
+  .file-actions button {
+    padding: 8px;
+    background-color: #FAC712;
+    color: #332D2D;
+    border-radius: 10%;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #D8AC00;
+    }
+  }
+  
+  /* Example of a media query for small screens */
+@media (max-width: 768px) {
+    /* Your styles for small screens here */
+  }
+
+  /* UploadDocument.css */
+
+/* ... (previous styles) */
+
+.confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FCF7EB;
+  border-radius: 15px;
+  padding: 20px;
+  width: 880px;
+  height: 250px;
+  max-width: 80%;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.confirmation-modal p {
+  font-size: 22px;
+  text-align: left;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  margin: 10px;
+}
+
+.confirmation-modal button {
+  color: #332D2D;
+  padding: 10px 20px;
+  margin-right: 120px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.confirmation-modal button:last-child {
+  margin-right: 0;
+}
